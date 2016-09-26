@@ -29,7 +29,9 @@ if os.name == 'nt':
 else:
     _BACKEND = 'tensorflow'
 
-_config_path = os.path.expanduser(os.path.join(_keras_dir, 'keras.json'))
+_config_path = os.getenv('KERAS_CONFIG_PATH',
+                         os.path.expanduser(os.path.join(
+                             _keras_dir, 'keras.json')))
 if os.path.exists(_config_path):
     _config = json.load(open(_config_path))
     _floatx = _config.get('floatx', floatx())

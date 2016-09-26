@@ -21,6 +21,9 @@ If you have run Keras at least once, you will find the Keras configuration file 
 
 If it isn't there, you can create it.
 
+You can override the path to the Keras configuration file with the
+``KERAS_CONFIG_PATH`` environment variable.
+
 The default configuration file looks like this:
 
 ```
